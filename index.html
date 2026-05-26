@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Can Foundation Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!---background-->
+    <div class="bg-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <!--navbar-->
+    <nav>
+        <div class="brand">
+            <img src="assets/sheCanLogo.jfif" alt="She Can Foundation Logo">
+            <span>She Can Foundation</span>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Programs</a></li>
+            </ul>
+            <a href="admin.html" class="nav-admin">Admin ↗</a>
+        </div>
+    </nav>
+
+    <!---hero-->
+    <section class="hero">
+        <div class="pill">Empowering Women in Tech</div>
+        <h1>Reach Out.<br><em>Let's Build</em> Together.</h1>
+        <p class="hero-sub">Whether you want to volunteer, collaborate, or learn more about our programs — we'd love to
+            hear from you.</p>
+    </section>
+
+    <!---statistics-->
+    <div class="stats">
+        <div class="stat-pill"><span class="stat-num">2,400+</span><span class="stat-label">Women Trained</span></div>
+        <div class="stat-pill"><span class="stat-num">180+</span><span class="stat-label">Partner NGOs</span></div>
+        <div class="stat-pill"><span class="stat-num">38</span><span class="stat-label">Cities Reached</span></div>
+        <div class="stat-pill"><span class="stat-num">94%</span><span class="stat-label">Job Placement</span></div>
+    </div>
+
+    <!---main-->
+    <!-- MAIN -->
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>How can<br>we help?</h2>
+            <p>Fill the form and our team will get back to you within 2 working days. Every message is read personally.
+            </p>
+            <div class="info-list">
+                <div class="info-item">
+                    <div class="info-icon i-rose">📍</div>
+                    <div><strong>Visit Us</strong><span>New Delhi, India</span></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon i-gold">✉️</div>
+                    <div><strong>Email</strong><span>hello@shecansupport.org</span></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon i-green">⏱️</div>
+                    <div><strong>Response Time</strong><span>Within 2 working days</span></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon i-rose">🌱</div>
+                    <div><strong>Open to Everyone</strong><span>Students, volunteers & partners welcome</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="form-card" id="formCard">
+
+            <!-- SUCCESS OVERLAY -->
+            <div class="success-overlay" id="successOverlay">
+                <div class="check-circle">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M8 21 L17 30 L33 12" />
+                    </svg>
+                </div>
+                <h3>Form Submitted Successfully!</h3>
+                <p>Thank you for reaching out.<br>Our team will get back to you within 2 working days.</p>
+                <button class="btn-again" onclick="resetForm()">Send another message</button>
+            </div>
+
+            <div class="form-title">Send a Message</div>
+            <div class="form-sub">Fields marked <span style="color:var(--rose)">*</span> are required</div>
+
+            <!-- Error banner -->
+            <div class="err-banner" id="errBanner"></div>
+
+            <form id="contactForm" novalidate>
+
+                <div class="two-col">
+                    <div class="field">
+                        <input type="text" id="fName" placeholder=" " autocomplete="given-name" />
+                        <label for="fName">First Name *</label>
+                        <div class="err" id="fNameErr">First name is required</div>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="lName" placeholder=" " autocomplete="family-name" />
+                        <label for="lName">Last Name</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input type="email" id="email" placeholder=" " autocomplete="email" />
+                    <label for="email">Email Address *</label>
+                    <div class="err" id="emailErr">Enter a valid email address</div>
+                </div>
+
+                <div class="two-col">
+                    <div class="field">
+                        <input type="text" id="phone" placeholder=" " />
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="field has-select">
+                        <select id="topic">
+                            <option value="" disabled selected></option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="internship">Internship</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="donation">Donation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="topic">Topic</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <textarea id="msg" placeholder=" " maxlength="500"></textarea>
+                    <label for="msg">Your Message *</label>
+                    <div class="char-bar">
+                        <span class="err" id="msgErr" style="display:none">Message must be at least 10 characters</span>
+                        <span></span>
+                        <span id="charCount">0 / 500</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">Send Message</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <footer>© 2025 She Can Foundation · Built for the She Can Internship Selection Task</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
