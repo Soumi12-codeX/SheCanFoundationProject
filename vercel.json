@@ -1,14 +1,26 @@
 {
-    "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/static"
-        }
-    ],
-    "build": {
-        "env": {
-            "VITE_SUPABASE_URL": "VITE_SUPABASE_KEY",
-            "VITE_SUPABASE_KEY": "VITE_SUPABASE_KEY"
-        }
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
     }
+  ],
+  "build": {
+    "env": {
+      "VITE_SUPABASE_URL": "VITE_SUPABASE_URL",
+      "VITE_SUPABASE_KEY": "VITE_SUPABASE_KEY"
+    }
+  }
 }
