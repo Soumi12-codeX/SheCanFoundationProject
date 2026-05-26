@@ -1,5 +1,5 @@
-const SUPABASE_URL = "VITE_SUPABASE_URL";
-const SUPABASE_KEY = "VITE_SUPABASE_KEY";
+const SUPABASE_URL = "https://oziegpjkoftnjjuwmkmj.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96aWVncGprb2Z0bmpqdXdta21qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MDUwMTcsImV4cCI6MjA5NTM4MTAxN30.nV-S75OyJDFWWlBv7Lq2GJXWGvSbUltPXmSngzdEpCE";
 
 
 // Floating label for select
