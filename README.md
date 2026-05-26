@@ -8,7 +8,7 @@ This project goes far beyond a simple static form—it implements a contemporary
 
 ## 🔗 Live Deployments
 * **Live Application URL:** https://she-can-foundation-task-sigma.vercel.app/
-* **Admin Dashboard URL:**  https://she-can-foundation-task-sigma.vercel.app/admin
+* **Admin Dashboard URL:**  [https://she-can-foundation-task-sigma.vercel.app/admin.html](https://she-can-foundation-task-sigma.vercel.app/admin.html)
 * **Secure Portal Key:** `admin123` *(Default testing password)*
 
 ---
