@@ -71,7 +71,7 @@ body {
     }
 }
 
- /* ─── NAV ───────────────────────────────── */
+ /*NAV*/
  nav {
      position: sticky;
      position: relative;
@@ -223,7 +223,7 @@ body {
     display: none;
 }
 
-/* DASHBOARD CONTENT (HIDDEN BY DEFAULT) */
+/* DASHBOARD CONTENT*/
 .dashboard-content {
     display: none;
     animation: fadeIn 0.5s ease both;

@@ -27,7 +27,6 @@ async function fetchMessages() {
     emptyState.style.display = 'none';
 
     try {
-        // Construct clear clean URL target matching your schema layout
         const targetUrl = `${SUPABASE_URL}/rest/v1/contact_messages?order=created_at.desc`;
 
         const response = await fetch(targetUrl, {
